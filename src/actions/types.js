@@ -1,0 +1,17 @@
+export const FETCH_VIDEO = "fetch_video";
+export const SEARCH_VIDEO = "search_video";
+export const CHANGE_SELECTOR = "change_selector";
+export const USER_AUTH = "user_auth";
+export const USER_SIGNUP = "user_signup";
+export const USER_LOGIN = "user_login";
+export const DISPLAY_MODAL = "display_modal";
+export const FETCH_FAVORITE = "fetch_favorite";
+export const ADD_FAVORITE = "add_favorite";
+export const DELETE_FAVORITE = "delete_favorite";
+export const CLEAR_FAVORITE = "claer_favorite";
+export const FETCH_COMMENTS = "fetch_comments";
+export const ADD_COMMENT = "add_comment";
+export const EDIT_COMMENT = "edit_comment";
+export const DELETE_COMMENT = "delete_comment";
+export const TOGGLE_NAV = "toggle_nav";
+export const VIDEO_PLAYING = "video_playing";

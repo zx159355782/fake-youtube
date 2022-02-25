@@ -1,0 +1,246 @@
+.playvideo {
+  display: flex;
+  margin-top: 2rem;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+.video-primary {
+  width: 75%;
+  padding: 0 2rem;
+  color: #fff;
+
+  @include phones {
+    width: 100%;
+  }
+
+  .video-desc {
+    border-bottom: 1px solid #aaaaaa31;
+  }
+
+  .favorite-btn {
+    cursor: pointer;
+    font-size: 1.4rem;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    margin-bottom: 2rem;
+
+    &:hover .fa-heart {
+      color: rgb(255, 98, 190);
+    }
+  }
+  .fa-heart {
+    transition: all 0.2s;
+  }
+
+  .video-title {
+    padding: 20px 0px;
+  }
+
+  .count {
+    font-size: 1.6rem;
+    padding: 25px 0;
+  }
+}
+
+.videobox {
+  position: relative;
+  padding-bottom: 56%;
+  z-index: 5;
+
+  iframe {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  margin-right: 10rem;
+
+  @include phones {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  @include large {
+    margin-right: 1rem;
+  }
+
+  // a {
+  //   display: block;
+  //   width: 100%;
+  // }
+}
+
+.play-list-item {
+  display: flex;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 1rem;
+
+  img {
+    margin-right: 1rem;
+
+    @media (max-width: 1023px) {
+      width: 50%;
+    }
+    @include phones {
+      width: auto;
+    }
+  }
+
+  .desc {
+    flex-grow: 1;
+    width: 50%;
+    @media (max-width: 1023px) {
+      width: 50%;
+    }
+    @include phones {
+      width: auto;
+    }
+  }
+  .title {
+    width: 100%;
+    display: -webkit-box;
+    font-size: 1.4rem;
+    max-height: 45px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .channel-title {
+    display: -webkit-box;
+    font-size: 1.4rem;
+    padding: 12px 0;
+    color: #aaaaaa;
+    max-height: 45px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.add-box {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.user-photo {
+  color: rgba(255, 255, 255, 0.856);
+  width: 40px;
+  height: 40px;
+  font-size: 3rem;
+  line-height: 40px;
+  font-weight: 600;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  background-color: rgb(214, 33, 33);
+  text-align: center;
+  align-self: flex-start;
+}
+
+.add-input {
+  color: #fff;
+  font-size: 1.6rem;
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #aaaaaa31;
+  outline: none;
+}
+
+.comment-container {
+  @include phones {
+    border-bottom: 1px solid #aaaaaa31;
+  }
+}
+
+.comment-box {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  padding: 12px 0;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #252525;
+  }
+
+  .user-name {
+    margin-right: 1rem;
+    font-weight: 600;
+  }
+
+  .time {
+    color: #aaaaaa;
+  }
+
+  .fa,
+  .fas {
+    cursor: pointer;
+    margin: 0 14px;
+  }
+}
+
+.comment-header {
+  margin-bottom: 2px;
+}
+
+.comment-content {
+  font-size: 1.4rem;
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+.features {
+  margin-left: auto;
+  font-size: 1.6rem;
+}
+
+.edit-input {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #aaaaaa31;
+  width: 100%;
+  padding: 5px 0px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.submit,
+.cancle {
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  padding: 7px 12px;
+  margin-right: 10px;
+  transition: all 0.2s;
+  border-radius: 20px;
+}
+
+.submit {
+  background-color: #ff8fa3;
+  &:hover {
+    background-color: #fa5e7b;
+  }
+}
+
+.cancle {
+  background-color: #90e0ef;
+  &:hover {
+    background-color: #52d8f0;
+  }
+}

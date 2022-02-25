@@ -1,0 +1,145 @@
+.favorite {
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    padding-left: 72px;
+    width: 25%;
+    height: calc(100vh - 56px);
+    padding: 24px;
+    background-color: #181818;
+    color: #fff;
+
+    @include desktops {
+      width: 350px;
+    }
+    @include tablets {
+      height: auto;
+      text-align: center;
+    }
+
+    .first-contaner {
+      position: relative;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    img {
+      width: 100%;
+    }
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      font-size: 1.4rem;
+      padding: 1rem 0;
+    }
+  }
+  .primary {
+    background-color: #0f0f0f;
+    flex-grow: 1;
+    min-height: calc(100vh - 56px);
+
+    @include tablets {
+      min-height: calc(100vh - 56px - 350px);
+    }
+
+    .list-item {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: #252525;
+      }
+
+      .fa-times {
+        cursor: pointer;
+        color: #aaaaaa;
+        margin-right: 60px;
+        font-size: 2rem;
+      }
+
+      .delete-favorite {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 60px;
+
+        @include tablets {
+          margin-right: 30px;
+        }
+
+        &:hover:before,
+        &:hover:after {
+          transform: rotate(0deg);
+          background-color: #e4e4e4;
+        }
+
+        &:before,
+        &:after {
+          content: "";
+          top: 0;
+          left: 0;
+          position: absolute;
+          background-color: #aaaaaa;
+          width: 2rem;
+          height: 3px;
+          transition: all 0.3s;
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    .index {
+      color: #aaaaaa;
+      text-align: center;
+      padding: 1rem;
+      font-weight: 700;
+      font-size: 1.4rem;
+      width: 36px;
+    }
+    .list-img {
+      width: 120px;
+    }
+    .list-description {
+      display: flex;
+      flex-grow: 1;
+      border-bottom: 1px solid #272727;
+      padding: 16px 0;
+      margin-right: 5px;
+
+      .list-text {
+        margin-left: 1rem;
+      }
+
+      .video-title {
+        display: -webkit-box;
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        max-height: 6rem;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .channel {
+        color: #aaaaaa;
+      }
+    }
+  }
+}

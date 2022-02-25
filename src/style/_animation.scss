@@ -1,0 +1,19 @@
+@keyframes modal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+@keyframes account {
+  from {
+    transform: translate(-50%, -70%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}

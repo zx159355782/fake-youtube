@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-family: "Rajdhani", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-size: 10px;
+  @include large {
+    font-size: 8px;
+  }
+
+  @include desktops {
+    font-size: 7px;
+  }
+
+  @include tablets {
+    font-size: 7px;
+  }
+}
+
+body {
+  background-color: #181818;
+}
+
+.page {
+  padding-left: 72px;
+
+  @include phones {
+    padding-left: 0;
+  }
+}
+
+.page-padding {
+  padding: 0;
+}
+
+.search-result {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-top: 20px;
+  max-width: 1096px;
+}

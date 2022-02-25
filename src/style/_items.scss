@@ -1,0 +1,112 @@
+.items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.item {
+  max-width: 320px;
+  margin: 0 6px 40px 6px;
+  color: #fff;
+
+  .title {
+    display: -webkit-box;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    font-weight: 500;
+    max-height: 4.4rem;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .channelTitle {
+    color: #aaaaaa;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+
+  .desc-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .star {
+      color: rgb(245, 247, 148);
+    }
+
+    .fa-star {
+      cursor: pointer;
+      font-size: 1.6rem;
+
+      &:hover {
+        color: rgb(245, 247, 148);
+      }
+    }
+  }
+
+  .desc {
+    color: #aaaaaa;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+}
+
+.search-item {
+  display: flex;
+  margin-bottom: 2.5rem;
+  padding: 0 20px;
+  width: 100%;
+  color: #fff;
+
+  img {
+    margin-right: 2rem;
+
+    @include phones {
+      width: 50%;
+    }
+  }
+  .desc {
+    flex-grow: 1;
+    @include phones {
+      width: 50%;
+    }
+  }
+
+  .title {
+    max-width: 100%;
+    display: -webkit-box;
+    line-height: 2.2rem;
+    font-weight: 500;
+    max-height: 4.4rem;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 1.8rem;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .channel-title {
+    font-size: 1.2rem;
+    padding: 12px 0;
+    color: #aaaaaa;
+  }
+  .description {
+    display: -webkit-box;
+    line-height: 1.5rem;
+    font-weight: 500;
+    max-height: 3rem;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.2rem;
+    color: #aaaaaa;
+  }
+}

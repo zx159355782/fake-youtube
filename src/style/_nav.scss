@@ -1,0 +1,43 @@
+.nav,
+.hide-nav {
+  position: fixed;
+  background-color: #202020fa;
+  left: 0;
+  top: 56px;
+  height: 100%;
+  width: 72px;
+  text-align: center;
+  font-size: 1rem;
+  z-index: 100;
+  transition: all 0.2s;
+
+  a,
+  a:link,
+  a:active {
+    display: block;
+    color: #fff;
+    padding: 16px 0 14px;
+
+    &:hover {
+      background-color: #383838;
+    }
+  }
+
+  .fas,
+  .far {
+    font-size: 2.4rem;
+    margin-bottom: 6px;
+  }
+}
+
+.hide-nav {
+  position: fixed;
+  background-color: #202020fa;
+  left: -100%;
+  top: 56px;
+  height: calc(100vh - 56px);
+  width: 72px;
+  text-align: center;
+  font-size: 1rem;
+  z-index: 100;
+}
