@@ -25,10 +25,12 @@ import {
   VIDEO_PLAYING,
 } from "./types";
 
+import config from "../config/config";
+
 export const fetchSearch = (search) => async (dispatch) => {
   const res = await axios.get(`https://www.googleapis.com/youtube/v3/search`, {
     params: {
-      key: "AIzaSyDiRa97hYHhtfOlXHUw3PnObWe29inaAqw",
+      key: config.apiKey,
       part: "snippet",
       type: "video",
       maxResults: 50,
@@ -45,7 +47,7 @@ export const fetchPopulars =
       `https://www.googleapis.com/youtube/v3/videos`,
       {
         params: {
-          key: "AIzaSyDiRa97hYHhtfOlXHUw3PnObWe29inaAqw",
+          key: config.apiKey,
           part: "snippet,contentDetails,statistics",
           chart: "mostPopular",
           videoCategoryId: categoryId,
@@ -186,7 +188,7 @@ export const deleteComment = (videoID, key) => async (dispatch) => {
 };
 
 export const editComment = (videoID, key, editContent) => async (dispatch) => {
-  const res = axios.patch(
+  axios.patch(
     `https://fake-yt-337110-default-rtdb.firebaseio.com/video/${videoID}/comments/${key}/.json`,
     { comment: editContent }
   );
@@ -200,7 +202,7 @@ export const toggleNav = () => {
 export const videoPlaying = (videoID) => async (dispatch) => {
   const res = await axios.get(`https://www.googleapis.com/youtube/v3/videos`, {
     params: {
-      key: "AIzaSyDiRa97hYHhtfOlXHUw3PnObWe29inaAqw",
+      key: config.apiKey,
       part: "snippet",
       id: videoID,
     },

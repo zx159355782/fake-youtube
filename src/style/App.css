@@ -63,6 +63,22 @@ body {
   max-width: 1096px;
 }
 
+.code-link {
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  bottom: 50%;
+  left: 5px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  z-index: 999999;
+}
+
+.fa-github {
+  font-size: 7rem;
+}
+
 .header {
   position: -webkit-sticky;
   position: sticky;

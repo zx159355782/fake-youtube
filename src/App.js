@@ -15,6 +15,7 @@ import Modal from "./components/Modal";
 import Favorite from "./pages/Favorite";
 import PlayVideo from "./pages/PlayVideo";
 import ScrollToTop from "./components/ScrollToTop";
+import Code from "./components/Code";
 
 import "./style/App.css";
 import "./style/fontawesome/css/all.css";
@@ -68,6 +69,7 @@ const App = ({
         </div>
         <Modal />
       </BrowserRouter>
+      <Code />
     </div>
   );
 };
