@@ -10,8 +10,12 @@ const Signup = (props) => {
   const [name, setName] = useState("");
 
   const handleSignup = (e) => {
-    e.preventDefault();
-    props.userSignup(email, password, name, props.displayModal);
+    if (password === checkPassword) {
+      e.preventDefault();
+      props.userSignup(email, password, name, props.displayModal);
+    } else {
+      e.preventDefault();
+    }
   };
 
   const alert = () => {

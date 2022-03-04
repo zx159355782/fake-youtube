@@ -91,6 +91,7 @@ export const userSignup =
       });
       setModal("");
       alert("註冊成功並登入");
+      window.location.reload();
     } catch (error) {
       alert(error.message);
     }
